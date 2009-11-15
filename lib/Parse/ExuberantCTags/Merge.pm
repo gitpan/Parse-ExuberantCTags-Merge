@@ -4,7 +4,7 @@ use 5.006001;
 use strict;
 use warnings;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 use constant DEBUG => 0;
 
 use constant SMALL_DEFAULT       => 2**22;
@@ -16,8 +16,6 @@ use constant SORTED              => 1;
 use constant MRG_LINE            => 0;
 use constant MRG_FH              => 1;
 
-
-# TODO document these:
 use Class::XSAccessor
   constructor => 'new',
   accessors => {
@@ -62,7 +60,7 @@ sub write {
   }
 
   my $total_size = 0;
-  my $sorted_size = 0;
+  my $sorted_size   = 0;
   my $unsorted_size = 0;
   my @sorted;
   my @unsorted;
@@ -110,7 +108,7 @@ sub write {
   my $threshold_super_small = $self->super_small_size_threshold();
   $threshold_super_small = SUPER_SMALL_DEFAULT if not defined $threshold_super_small;
   my $threshold_small = $self->small_size_threshold();
-  $threshold_super_small = SMALL_DEFAULT if not defined $threshold_small;
+  $threshold_small = SMALL_DEFAULT if not defined $threshold_small;
   warn "Thresholds: tiny=$threshold_super_small small=$threshold_small" if DEBUG > 1;
 
   # storage of temporary files and guard to clean them up on scope exit

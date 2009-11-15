@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:               Parse-ExuberantCTags-Merge
-version:            1.00
+version:            1.01
 abstract:           Efficiently merge large exuberant ctags files
 author:
     - Steffen Mueller <smueller@cpan.org>
@@ -14,6 +14,7 @@ requires:
     Class::XSAccessor:  1.03
     File::Copy:         0
     File::Temp:         0
+    Getopt::Long:       0
     Sort::External:     0
 no_index:
     directory:

@@ -1,3 +1,4 @@
+bin/ctags-merger
 Changes
 lib/Parse/ExuberantCTags/Merge.pm
 lib/Parse/ExuberantCTags/Merge/SimpleScopeGuard.pm
